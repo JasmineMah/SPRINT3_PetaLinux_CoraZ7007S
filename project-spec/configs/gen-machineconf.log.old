@@ -1,14 +1,14 @@
-2025-06-12 15:11:51,070 - [DEBUG] Using xsct from : /home/jasmine/PetaLinux/components/xsct/bin/xsct
-2025-06-12 15:11:51,070 - [INFO] Getting Platform info from HW file
-2025-06-12 15:11:51,070 - [DEBUG] Using the soc_family specified by user:zynq
-2025-06-12 15:11:51,106 - [DEBUG] Hardware Configuration:
-2025-06-12 15:11:51,106 - [DEBUG] MACHINE     = "None"
-2025-06-12 15:11:51,106 - [DEBUG] DEVICE_ID   = "7z007s"
-2025-06-12 15:11:51,106 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-06-12 15:11:51,106 - [DEBUG] SOC_VARIANT = ""
-2025-06-12 15:11:51,106 - [INFO] Silentconfig project
-2025-06-12 15:11:51,107 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/config conf /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/configs/Kconfig
-2025-06-12 15:11:51,117 - [DEBUG] *
+2025-06-12 16:31:27,561 - [DEBUG] Using xsct from : /home/jasmine/PetaLinux/components/xsct/bin/xsct
+2025-06-12 16:31:27,561 - [INFO] Getting Platform info from HW file
+2025-06-12 16:31:27,561 - [DEBUG] Using the soc_family specified by user:zynq
+2025-06-12 16:31:27,596 - [DEBUG] Hardware Configuration:
+2025-06-12 16:31:27,596 - [DEBUG] MACHINE     = "None"
+2025-06-12 16:31:27,596 - [DEBUG] DEVICE_ID   = "7z007s"
+2025-06-12 16:31:27,596 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-06-12 16:31:27,596 - [DEBUG] SOC_VARIANT = ""
+2025-06-12 16:31:27,596 - [INFO] Silentconfig project
+2025-06-12 16:31:27,597 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/config conf /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/configs/Kconfig
+2025-06-12 16:31:27,609 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/?] y
@@ -224,9 +224,9 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/config
 #
-2025-06-12 15:11:51,290 - [INFO] Silentconfig rootfs
-2025-06-12 15:11:51,290 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/rootfs_config conf /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/rootfsconfigs/Kconfig
-2025-06-12 15:11:51,325 - [DEBUG] *
+2025-06-12 16:31:27,780 - [INFO] Silentconfig rootfs
+2025-06-12 16:31:27,780 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/rootfs_config conf /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/rootfsconfigs/Kconfig
+2025-06-12 16:31:27,813 - [DEBUG] *
 * Configuration
 *
 *
@@ -3524,7 +3524,7 @@ Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux]
 #
 # configuration written to /home/jasmine/PetaLinuxOnCora/LinuxBoot2/project-spec/configs/rootfs_config
 #
-2025-06-12 15:11:51,342 - [INFO] Generating configuration files
-2025-06-12 15:11:51,345 - [DEBUG] No multilibs enabled.
-2025-06-12 15:11:51,345 - [DEBUG] No multilibs enabled.
-2025-06-12 15:11:51,392 - [DEBUG] Shutting down bitbake
+2025-06-12 16:31:27,831 - [INFO] Generating configuration files
+2025-06-12 16:31:27,833 - [DEBUG] No multilibs enabled.
+2025-06-12 16:31:27,834 - [DEBUG] No multilibs enabled.
+2025-06-12 16:31:27,881 - [DEBUG] Shutting down bitbake
