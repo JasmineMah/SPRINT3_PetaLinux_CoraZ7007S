@@ -1,0 +1,12 @@
+[Unit]
+Description=acaprun
+After=xvc.service hw_server.service cs_server.service mongod.service apache2.service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/acaprun.sh
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
+

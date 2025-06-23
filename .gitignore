@@ -2,12 +2,8 @@
 */*/config.old
 */*/rootfs_config.old
 build/
-images/linux/
 pre-built/linux/
-.petalinux/*
-!.petalinux/metadata
+images/linux/sdk/
 *.o
 *.jou
 *.log
-components/plnx_workspace
-components/yocto
