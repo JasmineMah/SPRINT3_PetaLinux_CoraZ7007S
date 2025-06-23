@@ -1,3 +1,9 @@
+images/linux/rootfs.cpio.gz.u-boot filter=lfs diff=lfs merge=lfs -text
+images/linux/rootfs.ext4 filter=lfs diff=lfs merge=lfs -text
+images/linux/sdk.sh filter=lfs diff=lfs merge=lfs -text
+images/linux/rootfs.cpio.gz filter=lfs diff=lfs merge=lfs -text
+images/linux/rootfs.cpio filter=lfs diff=lfs merge=lfs -text
+images/linux/rootfs.tar.gz filter=lfs diff=lfs merge=lfs -text
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
 *.cpio* filter=lfs diff=lfs merge=lfs -text
 *.ext4 filter=lfs diff=lfs merge=lfs -text
