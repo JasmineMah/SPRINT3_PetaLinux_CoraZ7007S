@@ -54,9 +54,9 @@ CONFIG_busybox=y
 # CONFIG_busybox-dbg is not set
 # CONFIG_busybox-inetd is not set
 # CONFIG_busybox-dev is not set
-# CONFIG_busybox-hwclock is not set
+CONFIG_busybox-hwclock=y
 # CONFIG_busybox-udhcpc is not set
-# CONFIG_busybox-syslog is not set
+CONFIG_busybox-syslog=y
 
 #
 # cpio 
@@ -156,10 +156,10 @@ CONFIG_fpga-manager-script=y
 #
 # i2c-tools 
 #
-# CONFIG_i2c-tools is not set
+CONFIG_i2c-tools=y
 # CONFIG_i2c-tools-dev is not set
 # CONFIG_i2c-tools-dbg is not set
-# CONFIG_i2c-tools-misc is not set
+CONFIG_i2c-tools-misc=y
 
 #
 # init-ifupdown 
@@ -171,7 +171,7 @@ CONFIG_fpga-manager-script=y
 #
 # initscripts 
 #
-# CONFIG_initscripts is not set
+CONFIG_initscripts=y
 # CONFIG_initscripts-dev is not set
 # CONFIG_initscripts-dbg is not set
 # CONFIG_initscripts-functions is not set
@@ -297,7 +297,7 @@ CONFIG_bash=y
 #
 # sysvinit 
 #
-# CONFIG_sysvinit is not set
+CONFIG_sysvinit=y
 # CONFIG_sysvinit-pidof is not set
 # CONFIG_sysvinit-dbg is not set
 # CONFIG_sysvinit-dev is not set
@@ -354,7 +354,7 @@ CONFIG_bash=y
 # CONFIG_util-linux-getopt is not set
 # CONFIG_util-linux-findfs is not set
 # CONFIG_util-linux-mountpoint is not set
-# CONFIG_util-linux-hwclock is not set
+CONFIG_util-linux-hwclock=y
 # CONFIG_util-linux-mcookie is not set
 # CONFIG_util-linux-dbg is not set
 # CONFIG_util-linux-mkfs.cramfs is not set
@@ -367,14 +367,14 @@ CONFIG_bash=y
 # CONFIG_util-linux-bash-completion is not set
 # CONFIG_util-linux-lscpu is not set
 # CONFIG_util-linux-prlimit is not set
-# CONFIG_util-linux-umount is not set
+CONFIG_util-linux-umount=y
 # CONFIG_util-linux-partx is not set
 # CONFIG_util-linux-mkfs is not set
 # CONFIG_util-linux-readprofile is not set
 # CONFIG_util-linux-uuidgen is not set
-# CONFIG_util-linux-mount is not set
+CONFIG_util-linux-mount=y
 # CONFIG_util-linux-fdisk is not set
-# CONFIG_util-linux-fsck is not set
+CONFIG_util-linux-fsck=y
 
 #
 # utils 
@@ -667,7 +667,7 @@ CONFIG_wget=y
 #
 # grep 
 #
-# CONFIG_grep is not set
+CONFIG_grep=y
 # CONFIG_grep-dbg is not set
 # CONFIG_grep-dev is not set
 
@@ -805,7 +805,7 @@ CONFIG_pciutils=y
 #
 # vim 
 #
-# CONFIG_vim is not set
+CONFIG_vim=y
 # CONFIG_vim-syntax is not set
 # CONFIG_vim-dev is not set
 # CONFIG_vim-help is not set
@@ -818,7 +818,7 @@ CONFIG_pciutils=y
 #
 # zip 
 #
-# CONFIG_zip is not set
+CONFIG_zip=y
 # CONFIG_zip-dev is not set
 # CONFIG_zip-dbg is not set
 
@@ -1072,11 +1072,11 @@ CONFIG_run-postinsts=y
 #
 # kexec-tools 
 #
-# CONFIG_kexec-tools is not set
+CONFIG_kexec-tools=y
 # CONFIG_kexec-tools-dbg is not set
-# CONFIG_kdump is not set
+CONFIG_kdump=y
 # CONFIG_kexec-tools-dev is not set
-# CONFIG_kexec is not set
+CONFIG_kexec=y
 # CONFIG_vmcore-dmesg is not set
 
 #
@@ -1562,7 +1562,7 @@ CONFIG_run-postinsts=y
 #
 # libtool 
 #
-# CONFIG_libtool is not set
+CONFIG_libtool=y
 # CONFIG_libtool-dbg is not set
 # CONFIG_libltdl is not set
 # CONFIG_libtool-dev is not set
@@ -2085,7 +2085,7 @@ CONFIG_run-postinsts=y
 #
 # blktool 
 #
-# CONFIG_blktool is not set
+CONFIG_blktool=y
 # CONFIG_blktool-dev is not set
 # CONFIG_blktool-dbg is not set
 
@@ -2136,7 +2136,7 @@ CONFIG_run-postinsts=y
 #
 # coreutils 
 #
-# CONFIG_coreutils is not set
+CONFIG_coreutils=y
 # CONFIG_coreutils-dev is not set
 # CONFIG_coreutils-dbg is not set
 
@@ -2215,7 +2215,7 @@ CONFIG_linux-xlnx-udev-rules=y
 #
 # gdb 
 #
-# CONFIG_gdb is not set
+CONFIG_gdb=y
 # CONFIG_gdb-dbg is not set
 # CONFIG_gdb-dev is not set
 # CONFIG_gdbserver is not set
@@ -2335,7 +2335,7 @@ CONFIG_linux-xlnx-udev-rules=y
 #
 # json-c 
 #
-# CONFIG_json-c is not set
+CONFIG_json-c=y
 # CONFIG_json-c-dbg is not set
 # CONFIG_json-c-dev is not set
 
@@ -2397,7 +2397,7 @@ CONFIG_linux-xlnx-udev-rules=y
 #
 # net-tools 
 #
-# CONFIG_net-tools is not set
+CONFIG_net-tools=y
 # CONFIG_net-tools-dbg is not set
 # CONFIG_net-tools-dev is not set
 
@@ -2918,22 +2918,22 @@ CONFIG_python3-dev=y
 #
 # sysfsutils 
 #
-# CONFIG_sysfsutils is not set
-# CONFIG_libsysfs is not set
+CONFIG_sysfsutils=y
+CONFIG_libsysfs=y
 # CONFIG_sysfsutils-dev is not set
 # CONFIG_sysfsutils-dbg is not set
 
 #
 # systemtap 
 #
-# CONFIG_systemtap is not set
+CONFIG_systemtap=y
 # CONFIG_systemtap-dev is not set
 # CONFIG_systemtap-dbg is not set
 
 #
 # sysvinit-inittab 
 #
-# CONFIG_sysvinit-inittab is not set
+CONFIG_sysvinit-inittab=y
 # CONFIG_sysvinit-inittab-dbg is not set
 # CONFIG_sysvinit-inittab-dev is not set
 
@@ -2982,7 +2982,7 @@ CONFIG_tcf-agent=y
 #
 # valgrind 
 #
-# CONFIG_valgrind is not set
+CONFIG_valgrind=y
 # CONFIG_valgrind-dbg is not set
 # CONFIG_valgrind-dev is not set
 
@@ -2997,7 +2997,7 @@ CONFIG_tcf-agent=y
 #
 # watchdog 
 #
-# CONFIG_watchdog is not set
+CONFIG_watchdog=y
 # CONFIG_watchdog-dbg is not set
 # CONFIG_watchdog-keepalive is not set
 # CONFIG_watchdog-dev is not set
@@ -3005,7 +3005,7 @@ CONFIG_tcf-agent=y
 #
 # watchdog-config 
 #
-# CONFIG_watchdog-config is not set
+CONFIG_watchdog-config=y
 # CONFIG_watchdog-config-dbg is not set
 # CONFIG_watchdog-config-dev is not set
 
@@ -3244,7 +3244,7 @@ CONFIG_bridge-utils=y
 #
 # tcpdump 
 #
-# CONFIG_tcpdump is not set
+CONFIG_tcpdump=y
 # CONFIG_tcpdump-dbg is not set
 # CONFIG_tcpdump-dev is not set
 
@@ -3769,8 +3769,8 @@ CONFIG_Init-manager-sysvinit=y
 #
 # user packages 
 #
-# CONFIG_gpio-demo is not set
-# CONFIG_peekpoke is not set
+CONFIG_gpio-demo=y
+CONFIG_peekpoke=y
 
 #
 # PetaLinux RootFS Settings

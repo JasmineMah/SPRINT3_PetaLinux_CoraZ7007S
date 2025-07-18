@@ -1,4 +1,6 @@
-/include/ "system-conf.dtsi"
+#include "system-conf.dtsi"
+#include "pl.dtsi"
+#include "dt-bindings/gpio/gpio.h"
 / {
 	model = "Zynq Cora Z7 Development Board";
 	compatible = "digilent,zynq-coraz7", "xlnx,zynq-7000";
@@ -6,8 +8,130 @@
 	chosen {
 		bootargs = "console=ttyPS0,115200 earlyprintk uio_pdrv_genirq.of_id=generic-uio";
 	};
-};
 
+	// Optional: Create aliases for generic GPIOs for LEDs/Relays
+	leds {
+		compatible = "generic-uio";
+		led1 {
+			label = "user-led1";
+			gpios = <&axi_gpio_0 11 0>; // Example pin
+			default-state = "off";
+		};
+		led2 {
+			label = "user-led2";
+			gpios = <&axi_gpio_0 12 0>; // Example pin
+			default-state = "off";
+		};
+		led3 {
+			label = "user-led3";
+			gpios = <&axi_gpio_0 13 0>; // Example pin
+			default-state = "off";
+		};
+		led4 {
+			label = "user-led4";
+			gpios = <&axi_gpio_0 9 0>; // Example pin
+			default-state = "off";
+		};
+		relay {
+			label = "relay";
+			gpios = <&axi_gpio_0 6 0>;
+			default-state = "off";
+		};
+		logic_level_shifter {
+			label = "LLS";
+			gpios = <&axi_gpio_0 5 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+	};
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		ramoops@1ff00000 {
+			compatible = "ramoops";
+			reg = <0x1ff00000 0x100000>; // 1MB
+			record-size = <0x20000>;
+			console-size = <0x20000>;
+			pmsg-size = <0x20000>;
+		};
+	};
+	leds_rgb {
+		compatible = "gpio-leds";
+
+		rgb1_red {
+			label = "rgb1-red";
+			gpios = <&axi_gpio_0 32 GPIO_ACTIVE_HIGH>; // GPIO2[0]
+			default-state = "off";
+		};
+		rgb1_green {
+			label = "rgb1-green";
+			gpios = <&axi_gpio_0 33 GPIO_ACTIVE_HIGH>; // GPIO2[1]
+			default-state = "off";
+		};
+		rgb1_blue {
+			label = "rgb1-blue";
+			gpios = <&axi_gpio_0 34 GPIO_ACTIVE_HIGH>; // GPIO2[2]
+			default-state = "off";
+		};
+
+		rgb2_red {
+			label = "rgb2-red";
+			gpios = <&axi_gpio_0 35 GPIO_ACTIVE_HIGH>; // GPIO2[3]
+			default-state = "off";
+		};
+		rgb2_green {
+			label = "rgb2-green";
+			gpios = <&axi_gpio_0 36 GPIO_ACTIVE_HIGH>; // GPIO2[4]
+			default-state = "off";
+		};
+		rgb2_blue {
+			label = "rgb2-blue";
+			gpios = <&axi_gpio_0 37 GPIO_ACTIVE_HIGH>; // GPIO2[5]
+			default-state = "off";
+		};
+	};
+};
+// Shield pins and RGB LEDs
+&axi_gpio_0 {
+	status = "okay";
+};
+// Define I2C Devices
+&axi_iic_0 {
+	status = "okay";
+	rtc: rtc@68 {
+		compatible = "dallas,ds1307";
+		reg = <0x68>;
+		interrupt-parent = <&axi_gpio_0>;
+		interrupts = <3 2>; // GPIO channel 1, pin 3, edge falling (2)
+	};
+
+	eeprom: eeprom@57 {
+		compatible = "atmel,24c32"; // or another compatible string
+		reg = <0x57>;
+		pagesize = <32>;
+	};
+};
+// Define SPI SD card using GPIO CS
+&axi_quad_spi_0 {
+	status = "okay";
+	spi-max-frequency = <50000000>;
+
+	spidev@0 {
+		compatible = "mmc-spi-slot";
+		reg = <0>; // SPI chip select 0 (but we'll override via GPIO)
+		spi-max-frequency = <25000000>;
+		voltage-ranges = <3300 3300>;
+		slot-name = "external";
+
+		cd-gpios = <&axi_gpio_0 7 0>;   // GPIO channel 1, pin 7 (Card Detect)
+		wp-gpios = <&axi_gpio_0 8 0>;   // GPIO channel 1, pin 8 (Write Protect)
+		cs-gpios = <&axi_gpio_0 10 0>;  // GPIO channel 1, pin 10 (Chip Select override)
+
+		status = "okay";
+	};
+};
+// Ethernet and other built-in hardware on the Cora (from V1)
 &gem0 {
 	phy-handle = <&ethernet_phy>;
 /*	phy-reset-gpio = <&gpio0 GPIO_ACTIVE_LOW>;
