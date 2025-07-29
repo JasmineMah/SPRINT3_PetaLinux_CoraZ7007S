@@ -1,5 +1,5 @@
 PETALINUX_VER=2024.2
-HARDWARE_PATH=/home/jasmine/VivadoProjects/CoraZ7_PetaLinux_WithPresets/CoraZ7_WithPresets_wrapper.xsa
+HARDWARE_PATH=/home/jasmine/VitisProjects/Cora_Zynq7000_FinalBit/hw/Cora_Zynq7000_FinalBit.xsa
 HDF_EXT=xsa
 VALIDATE_HW_CHKSUM=1
 YOCTO_SDK=f20b3d97af7961e8a255990489779ec7e341165af8ded0845145cd1cbfa5b91f

@@ -1,7 +1,0 @@
-the_ROM_image:
-{
-	[bootloader] /home/jasmine/PetaLinuxOnCora/LinuxBoot2/images/linux/zynq_fsbl.elf
-	/home/jasmine/PetaLinuxOnCora/LinuxBoot2/images/linux/system.bit
-	/home/jasmine/PetaLinuxOnCora/LinuxBoot2/images/linux/u-boot.elf
-	[load=0x100000] /home/jasmine/PetaLinuxOnCora/LinuxBoot2/images/linux/system.dtb
-}
