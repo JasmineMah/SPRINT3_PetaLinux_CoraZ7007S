@@ -26,14 +26,14 @@ CONFIG_sudo=y
 #
 # base-files 
 #
-# CONFIG_base-files is not set
+CONFIG_base-files=y
 # CONFIG_base-files-dbg is not set
 # CONFIG_base-files-dev is not set
 
 #
 # base-passwd 
 #
-# CONFIG_base-passwd is not set
+CONFIG_base-passwd=y
 # CONFIG_base-passwd-dev is not set
 # CONFIG_base-passwd-dbg is not set
 # CONFIG_base-passwd-update is not set
@@ -105,14 +105,14 @@ CONFIG_busybox-syslog=y
 #
 # e2fsprogs 
 #
-# CONFIG_e2fsprogs is not set
+CONFIG_e2fsprogs=y
 # CONFIG_e2fsprogs-resize2fs is not set
 # CONFIG_e2fsprogs-badblocks is not set
 # CONFIG_e2fsprogs-e2fsck is not set
-# CONFIG_libss is not set
+CONFIG_libss=y
 # CONFIG_libcomerr is not set
 # CONFIG_libext2fs is not set
-# CONFIG_e2fsprogs-dev is not set
+CONFIG_e2fsprogs-dev=y
 # CONFIG_e2fsprogs-tune2fs is not set
 # CONFIG_libe2p is not set
 CONFIG_e2fsprogs-mke2fs=y
@@ -164,8 +164,8 @@ CONFIG_i2c-tools-misc=y
 #
 # init-ifupdown 
 #
-# CONFIG_init-ifupdown is not set
-# CONFIG_init-ifupdown-dev is not set
+CONFIG_init-ifupdown=y
+CONFIG_init-ifupdown-dev=y
 # CONFIG_init-ifupdown-dbg is not set
 
 #
@@ -234,15 +234,15 @@ CONFIG_mtd-utils=y
 #
 # opkg 
 #
-# CONFIG_opkg is not set
+CONFIG_opkg=y
 # CONFIG_opkg-dev is not set
-# CONFIG_libopkg is not set
+CONFIG_libopkg=y
 # CONFIG_opkg-dbg is not set
 
 #
 # opkg-utils 
 #
-# CONFIG_opkg-utils is not set
+CONFIG_opkg-utils=y
 # CONFIG_update-alternatives-opkg is not set
 # CONFIG_opkg-utils-dbg is not set
 
@@ -338,7 +338,7 @@ CONFIG_sysvinit=y
 #
 # usbutils 
 #
-# CONFIG_usbutils is not set
+CONFIG_usbutils=y
 # CONFIG_usbutils-dbg is not set
 # CONFIG_usbutils-dev is not set
 
@@ -353,12 +353,12 @@ CONFIG_sysvinit=y
 # CONFIG_util-linux-uuidd is not set
 # CONFIG_util-linux-getopt is not set
 # CONFIG_util-linux-findfs is not set
-# CONFIG_util-linux-mountpoint is not set
+CONFIG_util-linux-mountpoint=y
 CONFIG_util-linux-hwclock=y
 # CONFIG_util-linux-mcookie is not set
 # CONFIG_util-linux-dbg is not set
 # CONFIG_util-linux-mkfs.cramfs is not set
-# CONFIG_util-linux-blkid is not set
+CONFIG_util-linux-blkid=y
 # CONFIG_util-linux-sulogin is not set
 # CONFIG_util-linux-losetup is not set
 # CONFIG_util-linux-fstrim is not set
@@ -383,7 +383,7 @@ CONFIG_util-linux-fsck=y
 #
 # shadow 
 #
-# CONFIG_shadow is not set
+CONFIG_shadow=y
 # CONFIG_shadow-base is not set
 # CONFIG_shadow-dev is not set
 # CONFIG_shadow-dbg is not set
@@ -2164,7 +2164,7 @@ CONFIG_coreutils=y
 #
 # libudev 
 #
-# CONFIG_libudev is not set
+CONFIG_libudev=y
 CONFIG_udev-extraconf=y
 CONFIG_linux-xlnx-udev-rules=y
 
@@ -2875,9 +2875,9 @@ CONFIG_python3-dev=y
 #
 # rgb 
 #
-# CONFIG_rgb is not set
+CONFIG_rgb=y
 # CONFIG_rgb-dbg is not set
-# CONFIG_rgb-dev is not set
+CONFIG_rgb-dev=y
 
 #
 # rpm 
@@ -2920,7 +2920,7 @@ CONFIG_python3-dev=y
 #
 CONFIG_sysfsutils=y
 CONFIG_libsysfs=y
-# CONFIG_sysfsutils-dev is not set
+CONFIG_sysfsutils-dev=y
 # CONFIG_sysfsutils-dbg is not set
 
 #
@@ -3759,10 +3759,12 @@ CONFIG_packagegroup-networking-stack=y
 # CONFIG_imagefeature-ssh-server-dropbear is not set
 CONFIG_imagefeature-ssh-server-openssh=y
 CONFIG_imagefeature-hwcodecs=y
-# CONFIG_imagefeature-package-management is not set
+CONFIG_imagefeature-package-management=y
+CONFIG_package-feed-uris="arm"
+CONFIG_package-feed-archs=""
 # CONFIG_imagefeature-debug-tweaks is not set
-# CONFIG_imagefeature-empty-root-password is not set
-# CONFIG_imagefeature-serial-autologin-root is not set
+CONFIG_imagefeature-empty-root-password=y
+CONFIG_imagefeature-serial-autologin-root=y
 # CONFIG_Init-manager-systemd is not set
 CONFIG_Init-manager-sysvinit=y
 
